@@ -1,0 +1,7 @@
+<% if account_signed_in? %>
+		<%= current_account.email %>
+		<%=link_to 'Log out',destroy_account_session_path, method: :delete%>
+	<% else %>
+		<%=link_to 'Regist', new_account_registration_path%>
+		<%=link_to 'Login', new_account_session_path%>
+	<% end %>
